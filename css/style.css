@@ -119,9 +119,9 @@ h6,
 }
 
 .hero-header {
-    background: url(../img/hero.jpg) center no-repeat;
+    background: url(..img/hero.jpg) center no-repeat;
     background-size: cover;
-    
+
 }
 
 .btn-play {
@@ -246,13 +246,13 @@ h6,
     height: calc(100% - 45px);
     top: 135px;
     left: 0;
-    background: linear-gradient(rgba(43, 40, 37, .9), rgba(43, 40, 37, .9)), url(../img/service.jpg) center center no-repeat;
+    background: linear-gradient(rgba(43, 40, 37, .9), rgba(43, 40, 37, .9)), url(..img/service.jpg) center center no-repeat;
     background-size: cover;
     z-index: -1;
 }
 
 .contact::after {
-    background: linear-gradient(rgba(43, 40, 37, .5), rgba(43, 40, 37, .5)), url(../img/bg.jpg) center center no-repeat;
+    background: linear-gradient(rgba(43, 40, 37, .5), rgba(43, 40, 37, .5)), url(..img/bg.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -265,12 +265,12 @@ h6,
     transition: .5s;
 }
 
-.team-item:hover > div > img {
+.team-item:hover>div>img {
     transform: scale(1.1);
     filter: blur(5px)
 }
 
-.team-item:hover > div > .img-overlay {
+.team-item:hover>div>.img-overlay {
     box-shadow: 0 0 20px 10px black;
 }
 
@@ -317,7 +317,7 @@ h6,
 }
 
 .bg-img {
-    background: linear-gradient(rgba(43, 40, 37, .5), rgb(0 0 0 / 50%)), url(../img/bg.jpg) center center no-repeat;
+    background: linear-gradient(rgba(43, 40, 37, .5), rgb(0 0 0 / 50%)), url(..img/bg.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -354,17 +354,16 @@ span {
 
 
 
-.bg-black{
+.bg-black {
     background-color: #000000;
 }
 
 
-.footer-logo-bg{
-    background-color: #000000
-    ;
+.footer-logo-bg {
+    background-color: #000000;
 }
 
-.footer-copyright{
+.footer-copyright {
     font-size: 14px;
     font-weight: 300;
     color: #9b9ea8;
@@ -372,16 +371,17 @@ span {
     letter-spacing: .004em;
 }
 
-.footer-copyright span{
+.footer-copyright span {
     font-weight: bold;
     color: #a2a4a8;
 }
 
-.footer-contact-btn{
+.footer-contact-btn {
     background-color: #000;
     border-style: solid 1px;
 }
-.footer-social-btn{
+
+.footer-social-btn {
     background-color: #000;
     border-style: none;
 }
@@ -394,12 +394,15 @@ span {
 
 
 .dropdown-menu {
-    background-color: #000000; /* Dropdown menu background color */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+    background-color: #000000;
+    /* Dropdown menu background color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add slight shadow */
 }
 
 .dropdown-item {
-    color: #ffffff; /* Dropdown item text color */
+    color: #ffffff;
+    /* Dropdown item text color */
     border-bottom: 2px;
     border-top: 2px;
     border-color: rgb(240, 165, 0, .1);
@@ -409,8 +412,10 @@ span {
 }
 
 .dropdown-item:hover {
-    background-color: #F0A500 ; /* Golden background on hover */
-    color: #000; /* White text on hover */
+    background-color: #F0A500;
+    /* Golden background on hover */
+    color: #000;
+    /* White text on hover */
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -419,18 +424,19 @@ span {
 }
 
 .navbar-toggler {
-    border-color: #f0c040; /* Golden color for toggler border */
+    border-color: #f0c040;
+    /* Golden color for toggler border */
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(240, 192, 64, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.service-text-box{
+.service-text-box {
     height: 180px;
 }
 
-.services-page-title{
+.services-page-title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.3em;
     font-weight: 400;
@@ -447,7 +453,7 @@ span {
     width: max-content;
 }
 
-.service-bg{
+.service-bg {
     border: 1px;
     border-style: solid;
     border-color: #F0A500;
