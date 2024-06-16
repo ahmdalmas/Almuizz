@@ -24,7 +24,7 @@ body {
   }
   
   section#formHolder {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
   }
   
   .brand {
@@ -33,7 +33,7 @@ body {
     background-size: cover;
     background-position: center center;
     color: #fff;
-    min-height: 965px;
+    min-height: 90vh;
     position: relative;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.6s cubic-bezier(1.000, -0.375, 0.285, 0.995);
@@ -152,17 +152,16 @@ body {
   
   .form .form-peice {
     background: #fff;
-    min-height: 900px;
-    margin-top: 30px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     color: #000;
     padding: 30px 0 60px;
     transition: all 0.9s cubic-bezier(1.000, -0.375, 0.285, 0.995);
-    position: absolute;
-    top: 0;
+    position: relative;
     left: -30%;
+    height: 100%;
     width: 130%;
     overflow: hidden;
+    align-content: center;
   }
   
   .form .form-peice.switched {
@@ -176,7 +175,7 @@ body {
     margin: 0;
     width: 70%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 60%;
     transform: translate(-50%, -50%);
   }
@@ -350,7 +349,6 @@ body {
     }
     section#formHolder .form {
       width: 80vw;
-      min-height: 800px;
       margin-left: 10vw;
     }
     section#formHolder .form .form-peice {
@@ -369,7 +367,6 @@ body {
       width: 100% !important;
       padding: 60px;
       left: 50%;
-      top: 40%;
     }
   }
   
@@ -494,3 +491,4 @@ body {
 /* Show content after loading */
 #depositValue {
   display: none;}
+  

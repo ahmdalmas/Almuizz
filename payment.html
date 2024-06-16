@@ -32,9 +32,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/payment.css" rel="stylesheet">
     <link href="css/priceModal.css" rel="stylesheet">
+    <link href="css/spinner.css" rel="stylesheet">
 
-    <script async src="https://js.stripe.com/v3/buy-button.js">
-    </script>
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body class="bg-bslack">
@@ -50,7 +50,7 @@
 
                 <!-- Brand Box -->
                 <div class="col-sm-12 col-md-6 brand align-items-center justify-content-center d-flex">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="/" class="navbar-brand">
                         <img src="img/logo.png" alt="logo" class="logo mobile-logo">
                         <!-- <h1 class="m-0 text-uppercase text-white"><i class="fa fa-birthday-cake fs-1 text-dark me-3"></i>Almuizz</h1> -->
                     </a>
@@ -60,11 +60,9 @@
                 <!-- Form Box -->
                 <div class="col-sm-6 form">
                     <div class="signup form-peice">
-                        <form class="signup-form row g-3 needs-validation" novalidate action="/checkout" method="post"
-                            id="form">
+                        <form class="signup-form row g-3 needs-validation" novalidate id="form">
                             <h2>DEPOSIT NOW</h2>
                             <div class="form-group">
-
                                 <span class="wpf--name fs-4 me-2"></span><label for="name">Full Name</label>
                                 <input type="text" name="name" id="name" class="name" required>
                                 <span class="error"></span>
@@ -349,24 +347,25 @@
 
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-7">
                                         <span class="tdesign--money fs-4 me-2"></span><label for="deposit">Deposit
                                             Amount</label>
-                                        <input type="text" name="deposit" id="deposit" class="name" required>
+                                        <input type="text" name="deposit" id="deposit" class="deposit" required>
                                         <span class="error"></span>
                                     </div>
-                                    <div class="col-6 align-items-end d-flex">
-                                        <select class="form-select" id="currency" aria-label="currency">
-                                            <option value="aed" selected>AED</option>
-                                            <option value="usd">$USD</option>
+                                    <div class="col-5 align-items-end d-flex">
+                                        <select class="form-select" id="currency">
+                                            <option value="AED" selected>AED</option>
+                                            <option value="USD">USD</option>
                                         </select>
+                                        <span class="error"></span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="CTA">
-                                <input type="submit" value="Deposit" id="submit-button" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
+                                <input type="submit" value="Deposit" id="submit-button" class="button-with-spinner">
+                                <div id="spinner" class="loading">Loading&#8230;</div>
                             </div>
 
 
@@ -380,14 +379,14 @@
         </section>
 
     </div>
-    <div class="custom-modal" style="z-index: 999999;">
+    <!-- <div class="custom-modal" style="z-index: 999999;">
         <div class="custom-modal-content">
             <h2>Form Submitted Successfully!</h2>
             <p>Deposit Amount: <span></span></p>
             <p>Currency: <span id="currencyValue"></span></p>
             <button type="button">Close</button>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="custom-overlay" id="successModal">
@@ -399,19 +398,19 @@
             </div>
             <div class="d-flex mb-3 align-items-center w-100 justify-content-evenly">
                 <h4 class="m-0">Amount:</h4>
-                    <div id="unit_p" class="d-flex flex-row gap-1 text-uppercase"></div>
-                    <!-- <h3 class="m-0" id="depositValue"></h3> -->
-                    
+                <div id="unit_p" class="d-flex flex-row gap-1 text-uppercase"></div>
+
             </div>
             <div class="d-flex flex-row gap-2 mb-3">
 
+                <input id="unit" hidden>
                 <div class="custom-btn-order">
-                    <button type="button" class="custom-cancel-btn" id="cancel-btn">
+                    <button type="reset" class="custom-cancel-btn" id="cancel-btn">
                         Cancel
                     </button>
                 </div>
                 <div class="custom-btn-order">
-                    <button type="button" class="custom-btn">
+                    <button id="submit-payment" type="submit" class="custom-btn">
                         Pay
                     </button>
                 </div>
